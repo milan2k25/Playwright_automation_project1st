@@ -1,10 +1,10 @@
-# Quick Setup Guide - InferIQ Playwright Framework
+# Quick Setup Guide - example Playwright Framework
 
 ## 🚀 Quick Start (5 Minutes)
 
 ### Step 1: Navigate to Project Directory
 ```powershell
-cd "D:\Automation Project\Test_Env\inferiq_qa_playwright"
+cd "D:\Automation Project\Test_Env\example_qa_playwright"
 ```
 
 ### Step 2: Install Dependencies
@@ -20,7 +20,7 @@ playwright install
 ### Step 4: Run Tests
 ```powershell
 cd test_demo
-pytest test_inferIQ_bank_statement.py --browser_name chrome -v
+pytest test_example_bank_statement.py --browser_name chrome -v
 ```
 
 ## ✅ Verify Installation
@@ -38,7 +38,7 @@ python -c "import playwright; print('Playwright imported successfully')"
 cd test_demo
 
 # Run a single test
-pytest test_inferIQ_bank_statement.py::TestBankStatement::test_verify_bank_statement_side_bar_expanded --browser_name chrome -v
+pytest test_example_bank_statement.py::TestBankStatement::test_verify_bank_statement_side_bar_expanded --browser_name chrome -v
 ```
 
 ## 📊 View Reports
@@ -92,26 +92,26 @@ playwright install webkit
 1. ✅ Framework is ready to use!
 2. Add more test files to `testdata/bank_statement/`
 3. Customize `config.json` for your environment
-4. Extend tests in `test_inferIQ_bank_statement.py`
+4. Extend tests in `test_example_bank_statement.py`
 5. Run tests with different browsers (chrome, firefox, edge, webkit)
 
 ## 🎓 Key Commands Reference
 
 ```powershell
 # Run all tests
-pytest test_inferIQ_bank_statement.py --browser_name chrome -v
+pytest test_example_bank_statement.py --browser_name chrome -v
 
 # Run with Firefox
-pytest test_inferIQ_bank_statement.py --browser_name firefox -v
+pytest test_example_bank_statement.py --browser_name firefox -v
 
 # Run with Edge
-pytest test_inferIQ_bank_statement.py --browser_name edge -v
+pytest test_example_bank_statement.py --browser_name edge -v
 
 # Run with WebKit (Safari engine)
-pytest test_inferIQ_bank_statement.py --browser_name webkit -v
+pytest test_example_bank_statement.py --browser_name webkit -v
 
 # Run specific test class
-pytest test_inferIQ_bank_statement.py::TestBankStatement -v
+pytest test_example_bank_statement.py::TestBankStatement -v
 
 # Run using batch script (from root directory)
 run_tests.bat

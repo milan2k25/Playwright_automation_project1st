@@ -6,20 +6,20 @@ from locators.home_page_locators import HomePageLocators
 
 
 '''
-Define All the common functionalities related to Login and Logout into InferIQ Application
+Define All the common functionalities related to Login and Logout into example Application
 '''
 
 
-class InferIQLoginPage:
+class exampleLoginPage:
 
     def __init__(self, page):
         self.page = page
         self.login_loc = LoginPageLocators
         self.home_loc = HomePageLocators
 
-    def inferIQ_login(self, url, email, password):
+    def example_login(self, url, email, password):
         """
-        Login to InferIQ application
+        Login to example application
         
         Args:
             url: Application URL
@@ -43,9 +43,9 @@ class InferIQLoginPage:
         except:
             logging.info('User already logged in')
             
-    def inferIQ_logout(self):
+    def example_logout(self):
         """
-        Logout from InferIQ application
+        Logout from example application
         """
         try:
             playwright_helper.is_element_clickable(self.login_loc.PROFILE_ICON_CSS).click()

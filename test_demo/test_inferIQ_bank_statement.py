@@ -1,7 +1,7 @@
 import pytest
 from utility import utils
-from pages.login_page import InferIQLoginPage
-from pages.home_page import InferIQHomePage
+from pages.login_page import exampleLoginPage
+from pages.home_page import exampleHomePage
 from pages.bank_statement_page import BankStatementPage
 
 required_lst = list()
@@ -13,8 +13,8 @@ class TestBankStatement:
     @pytest.fixture
     def initialize_pages(self, scope='class'):
 
-        self.pg_login = InferIQLoginPage(pytest.page)
-        self.pg_home = InferIQHomePage(pytest.page)
+        self.pg_login = exampleLoginPage(pytest.page)
+        self.pg_home = exampleHomePage(pytest.page)
         self.pg_bank_stmnt = BankStatementPage(pytest.page)
         
 
@@ -26,7 +26,7 @@ class TestBankStatement:
         2. Click on the side bar button and verify the navigation bar
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
 
         self.pg_home.select_section(testdata['section'])
@@ -41,7 +41,7 @@ class TestBankStatement:
         2. Verify the two tabs should be shown, i.e. Upload File and History
         '''
         
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
 
         self.pg_home.select_section(testdata['section'])
@@ -56,7 +56,7 @@ class TestBankStatement:
         2. Verify the two tabs should be shown and Upload file tab should be selected by default
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
 
         self.pg_home.select_section(testdata['section'])
@@ -72,7 +72,7 @@ class TestBankStatement:
         2. Verify the two tabs should be shown and Hitory tab should be shown right to Upload File Tab
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
 
         self.pg_home.select_section(testdata['section'])
@@ -88,7 +88,7 @@ class TestBankStatement:
         2. Under History Tab all the file names should be shown which are uploaded yet(Currently last 30 files are showing)
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
 
         self.pg_home.select_section(testdata['section'])
@@ -98,7 +98,7 @@ class TestBankStatement:
         lst_of_file_name = self.pg_bank_stmnt.verify_history_sections()
         required_lst.append(lst_of_file_name[0])
 
-        self.pg_login.inferIQ_logout()
+        self.pg_login.example_logout()
 
     def test_verify_BS_radio_button_selected(self, initialize_pages, testdata):
         '''
@@ -107,7 +107,7 @@ class TestBankStatement:
         2. Check by default bank statement Radio button should be selected
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
 
         self.pg_home.select_section(testdata['section'])
@@ -121,7 +121,7 @@ class TestBankStatement:
         2. Under History Tab Search By File Name option should be present and working
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
 
         self.pg_home.select_section(testdata['section'])
@@ -143,7 +143,7 @@ class TestBankStatement:
         self.pg_bank_stmnt.verify_search_bar_module_history_section(required_lst[0])
         required_lst.clear()
 
-        self.pg_login.inferIQ_logout()
+        self.pg_login.example_logout()
 
     def test_verify_BS_back_button_functionality(self, initialize_pages, testdata):
         '''
@@ -154,7 +154,7 @@ class TestBankStatement:
         4. It should be redirected to Home Page
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
         
         self.pg_home.select_section(testdata['section'])
@@ -163,7 +163,7 @@ class TestBankStatement:
 
         self.pg_bank_stmnt.verify_back_btn_from_OP_screen()
 
-        self.pg_login.inferIQ_logout()
+        self.pg_login.example_logout()
 
     def test_verify_BS_history_button_functionality(self, initialize_pages, testdata):
         '''
@@ -174,7 +174,7 @@ class TestBankStatement:
         4. It should be redirected to History Page and all the files should be shown
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
         
         self.pg_home.select_section(testdata['section'])
@@ -183,7 +183,7 @@ class TestBankStatement:
 
         self.pg_bank_stmnt.verify_history_btn_from_OP_screen()
 
-        self.pg_login.inferIQ_logout()
+        self.pg_login.example_logout()
 
     def test_verify_disclaimer_popup_should_come_and_uploaded_file_should_show_under_BS_history_tab(self, initialize_pages, testdata):
         '''
@@ -196,7 +196,7 @@ class TestBankStatement:
         6. Wait until it is completed, Initially that file status, Download, Preview buttons should be Disabled
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
         
         self.pg_home.select_section(testdata['section'])
@@ -212,7 +212,7 @@ class TestBankStatement:
         file_history.update(file_details)
         file_history.update(data_dict)
 
-        self.pg_login.inferIQ_logout()
+        self.pg_login.example_logout()
 
     def test_verify_uploaded_file_should_show_under_support_portal(self, initialize_pages, testdata):
         '''
@@ -225,7 +225,7 @@ class TestBankStatement:
         6. Submit that file, it should be Submitted and the output screen should be closed
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
         
         self.pg_bank_stmnt.go_to_support_portal()
@@ -238,7 +238,7 @@ class TestBankStatement:
 
         self.pg_bank_stmnt.verify_file_upload_message(testdata['success_msg'])
 
-        self.pg_login.inferIQ_logout()
+        self.pg_login.example_logout()
 
     def test_verify_uploaded_file_should_enabled_from_module_history(self, initialize_pages, testdata):
         '''
@@ -250,7 +250,7 @@ class TestBankStatement:
         5. Zip Output file should be downloaded, Unzip it and verify Output excel file should be present
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
         
         self.pg_home.select_section(testdata['section'])
@@ -266,7 +266,7 @@ class TestBankStatement:
         utils.remove_files(testdata['section'], testdata['option'])
         file_history.clear()
 
-        self.pg_login.inferIQ_logout()
+        self.pg_login.example_logout()
 
 
     def test_verify_disclaimer_popup_should_come_and_uploaded_image_should_show_under_history_tab(self, initialize_pages, testdata):
@@ -279,7 +279,7 @@ class TestBankStatement:
         5. Wait until it is completed, Initially that file status, Download, Preview buttons should be Disabled
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
         
         self.pg_home.select_section(testdata['section'])
@@ -295,7 +295,7 @@ class TestBankStatement:
         file_history.update(file_details)
         file_history.update(data_dict)
 
-        self.pg_login.inferIQ_logout()
+        self.pg_login.example_logout()
 
     
     def test_verify_uploaded_image_should_show_under_support_portal(self, initialize_pages, testdata):
@@ -309,7 +309,7 @@ class TestBankStatement:
         6. Submit that file, it should be Submitted and the output screen should be closed
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
         
         self.pg_bank_stmnt.go_to_support_portal()
@@ -322,7 +322,7 @@ class TestBankStatement:
 
         self.pg_bank_stmnt.verify_file_upload_message(testdata['success_msg'])
 
-        self.pg_login.inferIQ_logout()
+        self.pg_login.example_logout()
 
     
     def test_verify_uploaded_image_should_enabled_from_module_history(self, initialize_pages, testdata):
@@ -335,7 +335,7 @@ class TestBankStatement:
         5. Zip Output file should be downloaded, Unzip it and verify Output excel file should be present
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
         
         self.pg_home.select_section(testdata['section'])
@@ -350,7 +350,7 @@ class TestBankStatement:
 
         utils.remove_files(testdata['section'], testdata['option'])
 
-        self.pg_login.inferIQ_logout()
+        self.pg_login.example_logout()
 
     @pytest.mark.parametrize("file_path", utils.get_list_of_testdata_path('bank_statement'))
     def _test_verify_bank_statement_extraction_output(self, file_path, initialize_pages, testdata):
@@ -361,7 +361,7 @@ class TestBankStatement:
         3. Go to History Section, and check Output should be able to open for all the files
         '''
 
-        self.pg_login.inferIQ_login(
+        self.pg_login.example_login(
             pytest.config['dev_url'], pytest.config['dev_login']['email'], pytest.config['dev_login']['password'])
 
         self.pg_home.select_section(testdata['section'])

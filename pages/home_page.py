@@ -5,7 +5,7 @@ from helper import playwright_helper
 from locators.home_page_locators import HomePageLocators
 
 
-class InferIQHomePage:
+class exampleHomePage:
     
     def __init__(self, page):
         self.page = page

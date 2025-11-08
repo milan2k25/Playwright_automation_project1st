@@ -2,9 +2,9 @@
 
 ## ✅ What Was Created
 
-Your new repository **`inferiq_qa_playwright`** has been successfully created at:
+Your new repository **`example_qa_playwright`** has been successfully created at:
 ```
-D:\Automation Project\Test_Env\inferiq_qa_playwright
+D:\Automation Project\Test_Env\example_qa_playwright
 ```
 
 ---
@@ -12,7 +12,7 @@ D:\Automation Project\Test_Env\inferiq_qa_playwright
 ## 📁 Repository Structure
 
 ```
-inferiq_qa_playwright/
+example_qa_playwright/
 ├── config.json                       ✅ Copied (No changes)
 ├── dashboard_generator.py            ✅ Copied (No changes)
 ├── requirements.txt                  ✅ New (Playwright dependencies)
@@ -50,8 +50,8 @@ inferiq_qa_playwright/
 │   ├── conftest.py                   (Excel removed, cleaner)
 │   ├── pytest.ini
 │   ├── data/
-│   │   └── inferIQ_bank_statement.json
-│   └── test_inferIQ_bank_statement.py
+│   │   └── example_bank_statement.json
+│   └── test_example_bank_statement.py
 │
 ├── testdata/                         ✅ Copied (All PDFs)
 │   └── bank_statement/               (100+ test files)
@@ -67,7 +67,7 @@ inferiq_qa_playwright/
 
 ### Step 1: Open Terminal
 ```powershell
-cd "D:\Automation Project\Test_Env\inferiq_qa_playwright"
+cd "D:\Automation Project\Test_Env\example_qa_playwright"
 ```
 
 ### Step 2: Install Dependencies (One-time)
@@ -84,16 +84,16 @@ cd test_demo
 ### Step 4: Run Tests
 ```powershell
 # Run all bank statement tests with Chrome
-pytest test_inferIQ_bank_statement.py --browser_name chrome -v
+pytest test_example_bank_statement.py --browser_name chrome -v
 
 # Run specific test
-pytest test_inferIQ_bank_statement.py::TestBankStatement::test_verify_bank_statement_side_bar_expanded --browser_name chrome -v
+pytest test_example_bank_statement.py::TestBankStatement::test_verify_bank_statement_side_bar_expanded --browser_name chrome -v
 
 # Run with Firefox
-pytest test_inferIQ_bank_statement.py --browser_name firefox -v
+pytest test_example_bank_statement.py --browser_name firefox -v
 
 # Run with Edge
-pytest test_inferIQ_bank_statement.py --browser_name edge -v
+pytest test_example_bank_statement.py --browser_name edge -v
 ```
 
 ### Step 5: View Reports
@@ -179,7 +179,7 @@ playwright install chromium
 
 ```powershell
 # Basic execution
-pytest test_inferIQ_bank_statement.py --browser_name chrome -v
+pytest test_example_bank_statement.py --browser_name chrome -v
 
 # Different browsers
 --browser_name chrome    # Chrome/Chromium
@@ -188,7 +188,7 @@ pytest test_inferIQ_bank_statement.py --browser_name chrome -v
 --browser_name webkit    # WebKit (Safari engine)
 
 # Run specific test
-pytest test_inferIQ_bank_statement.py::TestBankStatement::test_name -v
+pytest test_example_bank_statement.py::TestBankStatement::test_name -v
 
 # Run with batch script (from root)
 cd ..
@@ -242,7 +242,7 @@ run_tests.bat
 
 ```powershell
 # 1. Navigate to project
-cd "D:\Automation Project\Test_Env\inferiq_qa_playwright"
+cd "D:\Automation Project\Test_Env\example_qa_playwright"
 
 # 2. Install (one-time)
 pip install -r requirements.txt
@@ -250,7 +250,7 @@ playwright install
 
 # 3. Run tests
 cd test_demo
-pytest test_inferIQ_bank_statement.py --browser_name chrome -v
+pytest test_example_bank_statement.py --browser_name chrome -v
 ```
 
 ---

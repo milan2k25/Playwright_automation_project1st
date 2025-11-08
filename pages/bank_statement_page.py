@@ -6,7 +6,7 @@ import zipfile
 from PyPDF2 import PdfReader
 from helper import playwright_helper
 from datetime import datetime, date
-from pages.home_page import InferIQHomePage
+from pages.home_page import exampleHomePage
 from locators.home_page_locators import HomePageLocators
 from locators.bank_statemenet_page_locators import BankStatementPageLocators
 
@@ -17,7 +17,7 @@ class BankStatementPage:
         self.page = page
         self.bank_stmnt_loc = BankStatementPageLocators
         self.home_loc = HomePageLocators
-        self.pg_home = InferIQHomePage(pytest.page)
+        self.pg_home = exampleHomePage(pytest.page)
 
     '''
     Define All the common functionalities related to Bank Statement

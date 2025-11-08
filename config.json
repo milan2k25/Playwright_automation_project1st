@@ -1,19 +1,19 @@
 {
-    "product": "InferIQ website",
-    "dev_url": "https://dev.inferiq.ai/",
-    "test_url": "https://test.inferiq.ai/",
-    "demo_url": "https://demo.inferiq.ai",
-    "sandbox_url": "https://sandbox.inferiq.ai/",
+    "product": "example website",
+    "dev_url": "https://dev.example.ai/",
+    "test_url": "https://test.example.ai/",
+    "demo_url": "https://demo.example.ai",
+    "sandbox_url": "https://sandbox.example.ai/",
     "dev_login": {
-        "email": "omprakash.m@idexcel.com",
+        "email": "omprakash.m@example.com",
         "password": "qetuO@2024!0987"
     },
     "test_login": {
-        "email": "omprakash.m@idexcel.com",
+        "email": "omprakash.m@example.com",
         "password": "OmPrakash$1302"
     },
     "sandbox_login": {
-        "email": "omprakash.m@idexcel.com",
+        "email": "omprakash.m@example.com",
         "password": "OmPrakash$1302"
     }
 }

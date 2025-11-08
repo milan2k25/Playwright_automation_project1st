@@ -17,7 +17,7 @@
 2025-11-08 12:08:44,543 :INFO : root : File Processing Completed, Status is now Enabled
 2025-11-08 12:08:44,543 :INFO : root : File Processing Completed, Download button is now Enabled
 2025-11-08 12:08:44,543 :INFO : root : File Processing Completed, Preview button is now Enabled
-2025-11-08 12:08:58,232 :INFO : root : Download initiated successfully, URL: blob:https://dev.inferiq.ai/2d523f3e-12a0-4d89-8642-e351719db0e2
+2025-11-08 12:08:58,232 :INFO : root : Download initiated successfully, URL: blob:https://dev.example.ai/2d523f3e-12a0-4d89-8642-e351719db0e2
 2025-11-08 12:08:58,232 :INFO : root : Suggested filename: Truist Bank 604916371-April-2022.zip
-2025-11-08 12:08:58,738 :INFO : root : Output Downloaded Successfully to: D:\Automation Project\Test_Env\inferiq_qa_playwright\download_output_file\bank_statement\Truist Bank 604916371-April-2022.zip
+2025-11-08 12:08:58,738 :INFO : root : Output Downloaded Successfully to: D:\Automation Project\Test_Env\example_qa_playwright\download_output_file\bank_statement\Truist Bank 604916371-April-2022.zip
 2025-11-08 12:09:02,222 :INFO : root : User Logged out Successfully

@@ -1,4 +1,4 @@
-# InferIQ Automation - Playwright Framework
+# example Automation - Playwright Framework
 
 Selenium-based test automation framework migrated to Playwright for improved stability and reliability.
 
@@ -13,7 +13,7 @@ Selenium-based test automation framework migrated to Playwright for improved sta
 ## Folder Structure
 
 ```
-inferiq_qa_playwright/
+example_qa_playwright/
 ├── config.json                    # Environment Configuration
 ├── dashboard_generator.py         # Custom Dashboard Generator
 ├── README.md
@@ -42,7 +42,7 @@ inferiq_qa_playwright/
 │   ├── conftest.py                # Pytest Configuration
 │   ├── pytest.ini
 │   ├── data/                      # JSON Test Data
-│   └── test_inferIQ_bank_statement.py
+│   └── test_example_bank_statement.py
 │
 ├── testdata/                      # Test Files (PDFs, Images)
 │   └── bank_statement/
@@ -98,13 +98,13 @@ pytest --browser_name webkit -v
 ### Run Specific Test File
 
 ```powershell
-pytest test_demo/test_inferIQ_bank_statement.py --browser_name chrome -v
+pytest test_demo/test_example_bank_statement.py --browser_name chrome -v
 ```
 
 ### Run Specific Test Function
 
 ```powershell
-pytest test_demo/test_inferIQ_bank_statement.py::TestBankStatement::test_verify_bank_statement_side_bar_expanded --browser_name chrome -v
+pytest test_demo/test_example_bank_statement.py::TestBankStatement::test_verify_bank_statement_side_bar_expanded --browser_name chrome -v
 ```
 
 ### Using Batch Script
@@ -127,7 +127,7 @@ After execution, reports are generated in the `report/` folder:
 
 ```json
 {
-  "dev_url": "https://dev.inferiq.com",
+  "dev_url": "https://dev.example.com",
   "dev_login": {
     "email": "user@example.com",
     "password": "password"
@@ -205,7 +205,7 @@ Ensure `testdata/bank_statement/` contains PDF files
 
 ## Maintainer
 
-InferIQ QA Team
+example QA Team
 
 ## License
 

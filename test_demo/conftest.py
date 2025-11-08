@@ -12,7 +12,7 @@ from core import playwright_manager
 
 def pytest_html_report_title(report):
     """Set custom HTML report title"""
-    report.title = "InferIQ Automation Report - Playwright"
+    report.title = "example Automation Report - Playwright"
 
 
 def pytest_addoption(parser):
@@ -108,8 +108,8 @@ def testdata(shared_datadir, request):
 
     .
     ├── data/
-    │   └── inferIQ_bank_statement.json
-    └── test_inferIQ_bank_statement.py
+    │   └── example_bank_statement.json
+    └── test_example_bank_statement.py
 
     the testdata fixture opens the file matching the module name (without 'test_') and
     will look for the key name which is the caller (test_method)

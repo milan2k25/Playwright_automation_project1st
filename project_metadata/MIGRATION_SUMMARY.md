@@ -132,10 +132,10 @@
 
 **Lines:** 294 → 130 lines (56% reduction!)
 
-#### `test_inferIQ_bank_statement.py` (MINOR CHANGES)
+#### `test_example_bank_statement.py` (MINOR CHANGES)
 **Changes:**
-- `InferIQLoginPage(pytest.driver)` → `InferIQLoginPage(pytest.page)`
-- `InferIQHomePage(pytest.driver)` → `InferIQHomePage(pytest.page)`
+- `exampleLoginPage(pytest.driver)` → `exampleLoginPage(pytest.page)`
+- `exampleHomePage(pytest.driver)` → `exampleHomePage(pytest.page)`
 - `BankStatementPage(pytest.driver)` → `BankStatementPage(pytest.page)`
 
 **Lines Changed:** ~3 out of 370 lines (0.8%)
@@ -151,7 +151,7 @@
 
 #### ✅ **NO CHANGES NEEDED!**
 - All bank statement PDFs copied
-- `inferIQ_bank_statement.json` copied as-is
+- `example_bank_statement.json` copied as-is
 
 **Why?** Test data is framework-agnostic!
 

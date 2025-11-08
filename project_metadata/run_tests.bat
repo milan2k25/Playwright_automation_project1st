@@ -1,10 +1,10 @@
 @echo off
-REM InferIQ Playwright Test Automation - Batch Execution Script
+REM example Playwright Test Automation - Batch Execution Script
 REM Author: QA Team
 REM Description: Runs all bank statement tests and generates dashboard
 
 echo ================================================
-echo   InferIQ Test Automation - Playwright
+echo   example Test Automation - Playwright
 echo ================================================
 echo.
 
@@ -13,7 +13,7 @@ cd test_demo
 
 REM Run pytest with Chrome browser
 echo Running tests with Chrome browser...
-pytest test_inferIQ_bank_statement.py --browser_name chrome -v
+pytest test_example_bank_statement.py --browser_name chrome -v
 
 REM Go back to root directory
 cd ..
