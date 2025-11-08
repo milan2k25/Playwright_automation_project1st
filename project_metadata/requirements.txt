@@ -1,0 +1,20 @@
+# Playwright Test Automation Framework - Requirements
+
+# Core Playwright
+playwright==1.48.0
+
+# Testing Framework
+pytest==8.3.3
+pytest-html==4.1.1
+pytest-datadir==1.5.0
+
+# Interface Pattern Support
+python-interface==1.6.1
+
+# Utility Libraries
+PyPDF2==3.0.1
+openpyxl==3.1.5
+
+# Additional Dependencies
+requests==2.32.3
+pathlib==1.0.1

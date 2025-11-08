@@ -1,0 +1,67 @@
+{
+    "verify_bank_statement_side_bar_expanded": {
+        "section": "bank_statement"
+    },
+    "verify_bank_statement_home_page_tablist": {
+        "section": "bank_statement"
+    },
+    "verify_bank_statement_home_page_default_tablist": {
+        "section": "bank_statement"
+    },
+    "verify_bank_statement_home_page_history_tablist": {
+        "section": "bank_statement"
+    },
+    "verify_fileName_shown_under_bank_statement_history_tab": {
+        "section": "bank_statement"
+    },
+    "verify_BS_radio_button_selected": {
+        "section": "bank_statement",
+        "option": "bank_statement"
+    },
+    "verify_bank_statement_search_optn_under_module_history_tab": {
+        "section": "bank_statement"
+    },
+    "verify_BS_back_button_functionality": {
+        "section": "bank_statement"
+    },
+    "verify_BS_history_button_functionality": {
+        "section": "bank_statement"
+    },
+    "verify_disclaimer_popup_should_come_and_uploaded_file_should_show_under_BS_history_tab": {
+        "section": "bank_statement",
+        "option": "bank_statement",
+        "file_extn": "pdf",
+        "success_msg": "File uploaded successfully.",
+        "tab_name1": "upload_file",
+        "tab_name2": "History"
+    },
+    "verify_uploaded_file_should_show_under_support_portal": {
+        "success_msg": "Data updated successfully"
+    },
+    "verify_uploaded_file_should_enabled_from_module_history": {
+        "section": "bank_statement",
+        "option": "bank_statement"
+    },
+    "verify_disclaimer_popup_should_come_and_uploaded_image_should_show_under_history_tab": {
+        "section": "bank_statement",
+        "option": "bank_statement",
+        "file_extn": "jpg",
+        "success_msg": "File uploaded successfully.",
+        "tab_name1": "upload_file",
+        "tab_name2": "History"
+    },
+    "verify_uploaded_image_should_show_under_support_portal": {
+        "success_msg": "Data updated successfully"
+    },
+    "verify_uploaded_image_should_enabled_from_module_history": {
+        "section": "bank_statement",
+        "option": "bank_statement"
+    },
+    "verify_bank_statement_extraction_output": {
+        "section": "bank_statement",
+        "option": "bank_statement",
+        "success_msg": "File uploaded successfully.",
+        "tab_name1": "upload_file",
+        "tab_name2": "History"
+    }
+}
